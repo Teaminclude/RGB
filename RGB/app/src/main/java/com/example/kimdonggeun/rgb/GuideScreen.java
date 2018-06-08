@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.MotionEvent;
-import android.widget.ImageView;
 
 public class GuideScreen extends Dialog{
 
@@ -15,20 +14,13 @@ public class GuideScreen extends Dialog{
 
     }
 
-
-    ImageView guideImage;
-
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.button_guide);
-
         getWindow().setLayout(android.view.WindowManager.LayoutParams.MATCH_PARENT, android.view.WindowManager.LayoutParams.MATCH_PARENT);
-
-        guideImage = findViewById(R.id.buttonguide_image);
 
     }
 
@@ -38,8 +30,17 @@ public class GuideScreen extends Dialog{
         return super.onTouchEvent(event);
     }
 
-    void setImage(int image){
-        guideImage.setImageResource(image);
+    void setGuidePage(int pageNum){
+        switch (pageNum){
+            case 0:
+                setContentView(R.layout.buttonguide0);
+                break;
+            case 1:
+                setContentView(R.layout.buttonguide1);
+                break;
+            default:
+                break;
+        }
     }
 
 }

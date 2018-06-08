@@ -32,7 +32,7 @@ public class graph_canvasview extends View {
 
         for (int i = 0; i < c1.getCount(); i++) {
             c1.moveToNext();
-            database_adpater.additem(c1.getInt(0), c1.getInt(1), c1.getInt(2), c1.getInt(3), c1.getInt(4), c1.getInt(5), c1.getInt(6), c1.getInt(7), c1.getString(8),false);
+            database_adpater.additem(c1.getInt(0), c1.getInt(1), c1.getInt(2), c1.getInt(3), c1.getInt(4), c1.getInt(5), c1.getInt(6), c1.getInt(7), c1.getString(8), false);
         }
         graph_item_class p = null;
         Calendar date = Calendar.getInstance();
@@ -42,9 +42,14 @@ public class graph_canvasview extends View {
 
 
         super.onDraw(canvas);
-        int num_R = 200;
-        int num_G = 100; //왼쪽 모서리
-        int num_B = 300; //오른쪽 모서리
+
+        int num_R,num_B,num_G;
+        num_R=num_B=num_G=0;
+        if(p!=null) {
+            num_R = p.getNum_r() ;
+            num_G = p.getNum_g() ; //왼쪽 모서리
+            num_B = p.getNum_b() ; //오른쪽 모서리
+        }
         int centerX = this.getWidth()/2;
         int centerY = this.getHeight()/2;
 
@@ -55,8 +60,8 @@ public class graph_canvasview extends View {
 
         Path path = new Path();
         path.moveTo(centerX , centerY-num_R); //위쪽 모서리
-        path.lineTo(centerX+num_B, centerY + num_B);//오른쪽 모서리
-        path.lineTo(centerX -num_G, centerY + num_G); //왼쪽 모서리
+        path.lineTo((float) (centerX+Math.sqrt(num_B*num_B/2)), (float) (centerY + Math.sqrt(num_B*num_B/2)));//오른쪽 모서리
+        path.lineTo((float) (centerX -Math.sqrt(num_G*num_G/2)), (float) (centerY + Math.sqrt(num_G*num_G/2))); //왼쪽 모서리
         path.lineTo(centerX , centerY-num_R);//MoveTo랑 경로가 같아야됨
 
         path.close();

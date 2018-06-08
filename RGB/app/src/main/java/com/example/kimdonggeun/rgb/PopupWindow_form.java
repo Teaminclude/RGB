@@ -1,28 +1,27 @@
 package com.example.kimdonggeun.rgb;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.SeekBar;
 
 
 public class PopupWindow_form extends AppCompatActivity {
 
-    SeekBar R_seekbar;
-    SeekBar G_seekbar;
-    SeekBar B_seekbar;
+    ProgressBar R_seekbar;
+    ProgressBar G_seekbar;
+    ProgressBar B_seekbar;
 
-
-    ViewPager viewpager;
+    Custom_viewpager viewpager;
+    boolean isyes=false;
 
     boolean threaddead;
     @Override
@@ -32,28 +31,43 @@ public class PopupWindow_form extends AppCompatActivity {
         setContentView(view);
 
 
+
+
+
         ImageButton exit_btn = (ImageButton)findViewById(R.id.form_exit_btn);
         exit_btn.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View view){
-            threaddead = true;
-            finish();
+                threaddead = true;
+                finish();
 
             }
         });
-        //ex
+        //seek bar
+
+        View.OnTouchListener no_touch_event = new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        };
+
         R_seekbar = (SeekBar)findViewById((R.id.form_seekbar1));
         G_seekbar = (SeekBar)findViewById((R.id.form_seekbar2));
         B_seekbar = (SeekBar)findViewById((R.id.form_seekbar3));
-        //R_seekbar.setEnabled(false);
-        //G_seekbar.setEnabled(false);
-        //B_seekbar.setEnabled(false);
-        //R_seekbar.setProgress(5);
+        R_seekbar.setOnTouchListener(no_touch_event);
+        G_seekbar.setOnTouchListener(no_touch_event);
+        B_seekbar.setOnTouchListener(no_touch_event);
+
+
 
 
         //viewpager
 
-        viewpager = (ViewPager)view.findViewById(R.id.form_view_pager);
+        viewpager = (Custom_viewpager)view.findViewById(R.id.form_view_pager);
         viewpager.setAdapter(new PopupWindow_viewpageradapter(getSupportFragmentManager()));
+
+
+
 
 
     }

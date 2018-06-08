@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/yuri/Documents/GitHub/new/rgbdong/RGB/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/yuri/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4556fa2d7053dc5bc246b23b9c79b507/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}
