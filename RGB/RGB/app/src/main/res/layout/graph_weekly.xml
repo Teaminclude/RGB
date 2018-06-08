@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8600FE">
+    <FrameLayout
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <ImageButton
+            android:layout_gravity="right"
+            android:src="@color/colorAccent"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text_graph_explain"
+                    android:text="5월"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="#FFFFFF"
+                    />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:shrinkColumns="*">
+
+                    <TableRow>
+
+                        <Button
+                            android:layout_margin="5dp"
+                            android:text="12" />
+
+                        <Button
+                            android:layout_margin="5dp"
+                            android:text="12" />
+
+                        <Button
+                            android:layout_margin="5dp"
+                            android:text="12" />
+
+                        <Button
+                            android:layout_margin="5dp"
+                            android:text="12" />
+
+                        <Button
+                            android:layout_margin="5dp"
+                            android:text="12" />
+
+                        <Button
+                            android:layout_margin="5dp"
+                            android:text="12" />
+
+                        <Button
+                            android:layout_margin="5dp"
+                            android:text="12" />
+                    </TableRow>
+                </TableLayout>
+                <TextView
+                    android:padding="20dp"
+                    android:text="성장이 많았던 한 주,\n이제 여유롭게 가볼까요?"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text_graph_explain2"
+                    android:text="5월"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="#FFFFFF"/>
+                <TableLayout
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shrinkColumns="*">
+                    <TableRow>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                    </TableRow>
+                    <TableRow>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                    </TableRow>
+                    <TableRow>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                    </TableRow>
+                    <TableRow>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                    </TableRow>
+                    <TableRow>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                        <Button android:layout_margin="5dp" android:text="12"/>
+                    </TableRow>
+                </TableLayout>
+                <TextView
+                    android:padding="20dp"
+                    android:text="성장이 많았던 한 주,\n이제 여유롭게 가볼까요?"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

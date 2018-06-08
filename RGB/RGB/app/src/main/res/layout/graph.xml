@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/graph_activity_background"
+    android:weightSum="1">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.13"
+        >
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/graph_calender_exit"
+            android:src="@drawable/graph_activity_home"
+            android:layout_gravity="right"
+            android:background="#00000000"
+            android:layout_margin="10dp"
+            />
+
+
+
+    </FrameLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                    <!-- 여기는 몇째주 그부분-->
+                <ImageButton
+                    android:id="@+id/graph_calender_lastweek"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="100dp"
+                    android:src="@drawable/graph_calender_last_week_btn"
+                    android:background="#00000000"/>
+
+                <ImageButton
+                    android:id="@+id/graph_calender_lastweek2"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="135dp"
+                    android:src="@drawable/graph_calender_last_week_btn2"
+                    android:background="#00000000"/>
+
+                    <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="100dp"
+                    android:id="@+id/graph_calender_nextweek"
+                    android:src="@drawable/graph_calender_next_week_btn"
+                    android:background="#00000000"
+                        />
+
+                <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="135dp"
+                    android:id="@+id/graph_calender_nextweek2"
+                    android:src="@drawable/graph_calender_next_week_btn2"
+                    android:background="#00000000"
+                    />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="6월 첫째주"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/graph_calender_current_week"
+                    />
+
+            </FrameLayout>
+
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/graph_calender_week_gridview"
+                android:numColumns="7"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:horizontalSpacing="10dp"
+                ></GridView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="성장이 많았던 한 주 \n 이제 여유롭게 가볼까요?"
+                android:textColor="#FFFFFF"
+                android:gravity="left|center"
+                android:textSize="30dp"
+                android:padding="10dp"
+                />
+            
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                <ImageButton
+                    android:id="@+id/graph_calender_lastmonth"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="100dp"
+                    android:src="@drawable/graph_calender_last_month_btn"
+                    android:background="#00000000"/>
+
+                <ImageButton
+                    android:id="@+id/graph_calender_lastmonth2"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="135dp"
+                    android:src="@drawable/graph_calender_last_week_btn2"
+                    android:background="#00000000"/>
+
+                <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="100dp"
+                    android:id="@+id/graph_calender_nextmonth"
+                    android:src="@drawable/graph_calender_next_month_btn"
+                    android:background="#00000000"
+                    />
+
+                <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="135dp"
+                    android:id="@+id/graph_calender_nextmonth2"
+                    android:src="@drawable/graph_calender_next_week_btn2"
+                    android:background="#00000000"
+                    />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="6월"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:id="@+id/graph_calender_current_month"
+                    />
+
+
+
+            </FrameLayout>
+
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:numColumns="7"
+                android:id="@+id/graph_calender_month_gridview"
+                android:padding="10dp"
+                android:horizontalSpacing="5dp"
+                ></GridView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
