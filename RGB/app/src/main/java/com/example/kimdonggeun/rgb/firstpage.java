@@ -20,10 +20,12 @@ public class firstpage extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                Intent notifi_service = new Intent(firstpage.this,Notification_Service.class);
+                startService(notifi_service);
                 Intent intent = new Intent(firstpage.this,MainActivity.class);
                 startActivity(intent);
 
-               finish();
+                finish();
 
             }
         },2000);

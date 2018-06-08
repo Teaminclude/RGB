@@ -75,6 +75,10 @@ public class graph_data_Sqliteopenhelper extends SQLiteOpenHelper {
 
     }
 
+    public void dbreset(SQLiteDatabase db){
+        db.delete("graph_data", null, null);
+    }
+
     public void dbinsert(SQLiteDatabase db,graph_item_class item){
 
         String TABLE_NAME = "graph_data";

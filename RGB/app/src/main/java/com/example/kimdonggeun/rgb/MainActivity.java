@@ -1,12 +1,12 @@
 package com.example.kimdonggeun.rgb;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageButton btnGraph, btnGuide, btnNextL, btnNextR;
     ViewPager container;
     Boolean guideOn=true;
+
+    public SharedPreferences prefs;
 
 
     @Override
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.AppTheme);
 
+        prefs = getSharedPreferences("Pref", MODE_PRIVATE);
+        checkFirstRun();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -56,11 +61,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNextL = findViewById(R.id.btn_arrow_left);
         btnNextL.setOnClickListener(this);
 
-        if(guideOn){
-            Intent intent = new Intent(this, GuideActivity.class);
-            startActivity(intent);
-            guideOn = !guideOn;
-        }
 
         container = findViewById(R.id.content_frame);
         Main_PagerAdapter adapter = new Main_PagerAdapter(getSupportFragmentManager());
@@ -121,12 +121,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.btn_guide:
-                if(container.getCurrentItem() == 0){
-                    showGuideScreen(R.drawable.button_guide0);
-                }
-                else{
-                    showGuideScreen(R.drawable.button_guide0);
-                }
+                if(container.getCurrentItem() == 0) showGuideScreen(0);
+                else showGuideScreen(1);
                 break;
             case R.id.btn_arrow_left:
                 container.setCurrentItem(0);
@@ -143,10 +139,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         GuideScreen dialog = new GuideScreen(this, android.R.style.Theme_Translucent_NoTitleBar);
 
+        dialog.setGuidePage(image);
         dialog.show();
-        dialog.setImage(image);
 
     }
+    public void checkFirstRun(){
+        boolean isFirstRun = prefs.getBoolean("isFirstRun",true);
+        if(isFirstRun)
+        {
+            Intent intent = new Intent(this, GuideActivity.class);
+            startActivity(intent);
 
+            prefs.edit().putBoolean("isFirstRun",false).apply();
+        }
+    }
 
 }

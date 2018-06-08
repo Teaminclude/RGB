@@ -21,6 +21,12 @@
         <activity android:name=".PopupWindow_form"/>
         <activity android:name=".GraphActivity"></activity>
 
+
+        <service
+            android:name=".Notification_Service"
+            android:enabled="true"
+            android:exported="true"></service>
+
     </application>
 
 </manifest>

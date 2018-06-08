@@ -58,10 +58,12 @@
                     android:layout_width="0dp"
                     android:layout_height="60dp"
                     android:layout_weight="0.8"
-                    android:max="10"
+                    android:max="9"
                     android:progress="0"
+                    android:thumb="@drawable/seekbar_thumb"
 
                     />
+
             </LinearLayout>
 
             <LinearLayout
@@ -85,10 +87,10 @@
                     android:layout_width="0dp"
                     android:layout_height="60dp"
                     android:layout_weight="0.8"
-                    android:max="10"
+                    android:max="9"
                     android:progress="0"
-                    android:progressTint="#01FF37"
-                    android:thumbTint="#01FF37" />
+                    android:progressTint="#b332ff50"
+                    android:thumb="@drawable/seekbar_thumb"/>
             </LinearLayout>
 
             <LinearLayout
@@ -113,10 +115,11 @@
                     android:layout_weight="0.8"
                     android:clickable="false"
                     android:focusable="false"
-                    android:max="10"
+                    android:max="9"
                     android:progress="0"
                     android:progressTint="#0000FF"
-                    android:thumbTint="#0000FF" />
+                    android:thumb="@drawable/seekbar_thumb"
+                    />
             </LinearLayout>
 
         </LinearLayout>
@@ -130,15 +133,18 @@
         android:layout_height="0dp"
         android:layout_weight="0.6"
         android:background="@drawable/round_layout_with_shadow"
-        android:layout_margin="20dp">
-        <android.support.v4.view.ViewPager
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <com.example.kimdonggeun.rgb.Custom_viewpager
             android:id="@+id/form_view_pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
 
-        </android.support.v4.view.ViewPager>
+
 
     </LinearLayout>
 
