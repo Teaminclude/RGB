@@ -6,52 +6,82 @@
     android:weightSum="1"
 
     >
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:text="Q1."
-        android:gravity="left|center"
-        android:textSize="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:textColor="#8600FE"
-        />
+        android:layout_weight="0.25"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="Q1"
+            android:gravity="left"
+            android:textSize="40dp"
+            android:layout_marginLeft="20dp"
+            android:paddingTop="20dp"
+            android:textColor="#8600FE"
+            android:id="@+id/form_q_num"
+
+            />
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:text="/12"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:paddingTop="50dp"
+            android:textColor="#8600FE"
+            />
+    </LinearLayout>
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.4"
         android:text="오늘 하루는 계획된 대로 잘 되셨나요?"
-        android:textStyle="bold"
         android:gravity="center"
         android:textSize="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:id="@+id/form_item_text"
+        android:textColor="#333333"
         />
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.2"
+            android:layout_weight="0.35"
             >
             <ImageButton
-                android:layout_width="80dp"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="70dp"
+                android:layout_marginBottom="30dp"
                 android:id="@+id/form_item_truebutton"
                 android:src="@drawable/form_yes_btn"
                 android:background="#00000000"/>
 
             <ImageButton
-                android:layout_width="80dp"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginRight="70dp"
+                android:layout_marginBottom="30dp"
                 android:src="@drawable/form_no_btn"
                 android:background="#00000000"
                 android:id="@+id/form_item_falsebutton"/>
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_margin="20dp"
+                android:background="#00000000"
+                android:src="@drawable/previous_btn"
+                android:id="@+id/form_previous_btn"
+                android:layout_gravity="bottom|left"
+                />
 
         </FrameLayout>
 

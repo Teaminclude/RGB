@@ -60,8 +60,8 @@ public class graph_canvasview extends View {
 
         Path path = new Path();
         path.moveTo(centerX , centerY-num_R); //위쪽 모서리
-        path.lineTo(centerX+num_B, centerY + num_B);//오른쪽 모서리
-        path.lineTo(centerX -num_G, centerY + num_G); //왼쪽 모서리
+        path.lineTo((float) (centerX+Math.sqrt(num_B*num_B/2)), (float) (centerY + Math.sqrt(num_B*num_B/2)));//오른쪽 모서리
+        path.lineTo((float) (centerX -Math.sqrt(num_G*num_G/2)), (float) (centerY + Math.sqrt(num_G*num_G/2))); //왼쪽 모서리
         path.lineTo(centerX , centerY-num_R);//MoveTo랑 경로가 같아야됨
 
         path.close();

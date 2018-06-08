@@ -20,8 +20,8 @@ public class PopupWindow_form extends AppCompatActivity {
     ProgressBar G_seekbar;
     ProgressBar B_seekbar;
 
-
     Custom_viewpager viewpager;
+    boolean isyes=false;
 
     boolean threaddead;
     @Override
