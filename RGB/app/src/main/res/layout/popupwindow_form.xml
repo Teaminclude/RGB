@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:minWidth="400dp"
+    android:layout_height="match_parent"
+    tools:context=".PopupWindow_form"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:background="@drawable/form_background"
+    >
+
+    <ImageButton
+        android:id="@+id/form_exit_btn"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.1"
+        android:background="#00000000"
+        android:src="@drawable/cancel_button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:layout_weight="0.3"
+        android:background="@drawable/round_layout_with_shadow"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"
+                    android:src="@drawable/form_relation"
+                    />
+
+                <SeekBar
+                    android:id="@+id/form_seekbar1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.8"
+                    android:max="10"
+                    android:progress="0"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"
+                    android:src="@drawable/form_growth"
+                    />
+
+
+                <SeekBar
+                    android:id="@+id/form_seekbar2"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.8"
+                    android:max="10"
+                    android:progress="0"
+                    android:progressTint="#01FF37"
+                    android:thumbTint="#01FF37" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="0.2"
+                    android:layout_gravity="center"
+                    android:src="@drawable/form_break"
+                    />
+
+                <SeekBar
+                    android:id="@+id/form_seekbar3"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.8"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:max="10"
+                    android:progress="0"
+                    android:progressTint="#0000FF"
+                    android:thumbTint="#0000FF" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:background="@drawable/round_layout_with_shadow"
+        android:layout_margin="20dp">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/form_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

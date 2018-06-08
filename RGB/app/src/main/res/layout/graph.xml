@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:weightSum="1">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.13"
+        >
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/graph_calender_exit"
+            android:src="@drawable/graph_activity_home"
+            android:layout_gravity="right"
+            android:background="#00000000"
+            android:layout_margin="10dp"
+            />
+
+
+
+    </FrameLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                    <!-- 여기는 몇째주 그부분-->
+                <ImageButton
+                    android:id="@+id/graph_calender_lastweek"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="110dp"
+                    android:src="@drawable/graph_calender_last_week_btn"
+                    android:background="@color/transparent"/>
+
+                <ImageButton
+                    android:id="@+id/graph_calender_lastweek2"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="150dp"
+                    android:src="@drawable/graph_calender_last_btn"
+                    android:background="@color/transparent"/>
+
+                    <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="110dp"
+                    android:id="@+id/graph_calender_nextweek"
+                    android:src="@drawable/graph_calender_next_week_btn"
+                    android:background="#00000000"
+                        />
+
+                <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="150dp"
+                    android:id="@+id/graph_calender_nextweek2"
+                    android:src="@drawable/graph_calender_next_btn"
+                    android:background="#00000000"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="6월 첫째주"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="#555555"
+                    android:textSize="25dp"
+                    android:id="@+id/graph_calender_current_week"
+                    />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="일"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="월"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="화"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="수"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="목"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="금"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="토"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:id="@+id/graph_calender_week_gridview"
+                android:numColumns="7"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="50dp"
+                android:paddingTop="5dp"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="8dp"
+               />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                >
+                <ImageButton
+                    android:id="@+id/graph_calender_lastmonth"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="110dp"
+                    android:src="@drawable/graph_calender_last_month_btn"
+                    android:background="#00000000"/>
+
+                <ImageButton
+                    android:id="@+id/graph_calender_lastmonth2"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="150dp"
+                    android:src="@drawable/graph_calender_last_btn"
+                    android:background="#00000000"/>
+
+                <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="110dp"
+                    android:id="@+id/graph_calender_nextmonth"
+                    android:src="@drawable/graph_calender_next_month_btn"
+                    android:background="#00000000"
+                    />
+
+                <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="150dp"
+                    android:id="@+id/graph_calender_nextmonth2"
+                    android:src="@drawable/graph_calender_next_btn"
+                    android:background="#00000000"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="6월"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="#555555"
+                    android:textSize="25dp"
+                    android:id="@+id/graph_calender_current_month"
+                    />
+
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="일"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="월"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="화"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="수"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="목"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="금"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="토"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:numColumns="7"
+                android:overScrollMode="never"
+                android:id="@+id/graph_calender_month_gridview"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="50dp"
+                android:paddingTop="5dp"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="8dp"
+                />
+
+            <ImageButton
+                android:src="@drawable/graph_delete_btn"
+                android:background="@color/transparent"
+                android:scaleType="centerInside"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:textSize="27dp"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
