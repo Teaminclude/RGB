@@ -3,12 +3,13 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.kimdonggeun.rgb"
+        applicationId "com.inclus.kimdonggeun.rgb"
         minSdkVersion 21
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -20,6 +21,11 @@ android {
         main {
             java.srcDirs = ['src/main/java', 'src/main/java/com/example/kimdonggeun/rgb/sql', 'src/main/java/forder']
         }
+    }
+    lintOptions {
+
+        checkReleaseBuilds false
+
     }
 }
 

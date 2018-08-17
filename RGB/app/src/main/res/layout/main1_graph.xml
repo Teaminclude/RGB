@@ -82,7 +82,7 @@
             android:src="@drawable/graph_break"
             android:layout_gravity="right|bottom"
             />
-        <com.example.kimdonggeun.rgb.graph_canvasview
+        <com.inclus.kimdonggeun.rgb.graph_canvasview
             android:id="@+id/graph_canvasview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>

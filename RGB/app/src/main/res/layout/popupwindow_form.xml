@@ -137,7 +137,7 @@
         android:orientation="vertical"
         android:weightSum="1">
 
-        <com.example.kimdonggeun.rgb.Custom_viewpager
+        <com.inclus.kimdonggeun.rgb.Custom_viewpager
             android:id="@+id/form_view_pager"
             android:layout_width="match_parent"
             android:layout_height="0dp"

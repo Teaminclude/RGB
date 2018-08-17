@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingRight="3dp">
-        <com.example.kimdonggeun.rgb.graph_draw_triangle
+        <com.inclus.kimdonggeun.rgb.graph_draw_triangle
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/calender_color"
